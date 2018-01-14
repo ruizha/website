@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block stylesheets %}
-
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock %}
 {% block scripts %}
 
 {% endblock %}
 {% block header %}
-    <p> I'm Rui Zhang </p>
+    <div class='page-header'>
+        <p> I'm Rui Zhang </p>
+    </div>
 {% endblock %}
 {% block body %}
     <div class='intro'>
@@ -31,11 +33,26 @@
         <div class='section' id='section-edu'>
             <p class='section-header'> Some Classes That I Enjoyed </p>
             <ul>
-            <li> <span class='bold'> Design and Analysis of Computer Algorithms (01:198:344) </span> Gave me an in-depth look and a greater understanding of the strengths and weaknesses of algorithms and how to apply them in different situation </li>
-            <li> <span class='bold'> Principles of Information and Data Management (01:198:336) </span> An interesting view into the theory and internal workings of various DBMS's </li>
-            <li> <span class='bold'> Introduction to Artifical Intelligence (01:640:440) </span> I took this class expecting to because I wanted to work with artificial intelligence. I came out of it wanting to work with Big Data because I learned that is what I really wanted to do. </li>
-            <li> <span class='bold'> Systems Programming </span> One of my favorite classes, taught by Professor Tjang. Through this course I learned how multithreading and multiprocessing really worked under the surface. I also got really good at C afterwards. </li>
-            <li> <span class='bold'> Computer Architectures </span> I learned how C works and found myself oddly enjoying it. Assembly and the Execution Stack were also pretty cool. </li>
+                <li> <span class='bold'> Design and Analysis of Computer Algorithms (01:198:344) </span> Gave me an in-depth look and a greater understanding of the strengths and weaknesses of algorithms and how to apply them in different situation </li>
+                <li> <span class='bold'> Principles of Information and Data Management (01:198:336) </span> An interesting view into the theory and internal workings of various DBMS's </li>
+                <li> <span class='bold'> Introduction to Artifical Intelligence (01:640:440) </span> I took this class expecting to because I wanted to work with artificial intelligence. I came out of it wanting to work with Big Data because I learned that is what I really wanted to do. </li>
+                <li> <span class='bold'> Systems Programming </span> One of my favorite classes, taught by Professor Tjang. Through this course I learned how multithreading and multiprocessing really worked under the surface. I also got really good at C afterwards. </li>
+                <li> <span class='bold'> Computer Architectures </span> I learned how C works and found myself oddly enjoying it. Assembly and the Execution Stack were also pretty cool. </li>
+        </div>
+        <div class='section' id='section-skills'>
+            <p class='section-header'> What I Can Do </p>
+            <div class='skills-list'>
+            {% for skill in progSkills %}
+                <div class='skill-element-container' id='skill-{{ skill.name }}'>
+                    <div class='skill-name' id='skill-{{ skill.name }}-text'><p> {{ skill.text }} </p></div>
+                    <div class='skill-rating' id='skill-{{ skill.name }}-rating'>
+                        {% for i in range(skill.rating) %}
+                            <div class='skill-rating-dot'></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

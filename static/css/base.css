@@ -1,0 +1,52 @@
+html {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+body {
+  width: 40%;
+  display: flex;
+  flex-flow: column;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.navbar {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center; }
+
+.navbar-item-element {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.bold, .section-header, .page-header {
+  font-weight: bold; }
+
+.section-header {
+  font-size: 20px; }
+
+.page-header {
+  font-size: 30px; }
+
+.active-tab {
+  color: #444444 !important; }
+
+.navbar-item-element {
+  height: 50px;
+  width: 125px;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+
+.navbar-item-element:hover {
+  color: white;
+  background: #adc9f7; }
+
+/*# sourceMappingURL=base.css.map */

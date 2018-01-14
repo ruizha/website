@@ -2,17 +2,17 @@
 <html>
     <head>
         <!-- stylesheets -->
-        <link rel='styleshee' type='text/css' href='{{ url_for("static", filename="css/base.css") }}'>
+        <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/base.css') }}">
         {% block stylesheets %}{% endblock %}
 
         <!-- scripts -->
-        <script src='{{ url_for("static", filename="js/base.js") }}'></script>
+        <script src="{{ url_for('static', filename='js/base.js') }}"></script>
         {% block scripts %}{% endblock %}
     </head>
     <body>
         <div class='navbar'>
             {% for item in navbarItems %}
-                <div class='navbar-item-element {% if item.active %} active {% else %} {% endif %}'
+                <div class='navbar-item-element {% if item.active %} active-tab {% else %} {% endif %}'
                      id='nav-element-{{ item.name}}'>
                     <p class='navbar-item-text' id='nav-element-{{ item.name }}-text'> {{ item.text }} </p>
                 </div>

@@ -1,0 +1,29 @@
+.skills-list {
+    display: flex;
+    flex-flow: column;
+}
+
+.skill-element-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    
+    p {
+        margin-right: 20px;
+    }
+}
+
+.skill-rating-dot {
+    width: 10px;
+    height: 10px;
+    background: #8ccef2;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.skill-rating {
+    display: flex;
+    flex-flow: row;
+    height: 15px;
+    width: 100%;
+}
