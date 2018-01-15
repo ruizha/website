@@ -3,7 +3,7 @@
 <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock %}
 {% block scripts %}
-
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
 {% block header %}
     <div class='page-header'>
@@ -11,7 +11,7 @@
     </div>
 {% endblock %}
 {% block body %}
-    <div class='intro'>
+    <div class='home'>
         <div class='section' id='section-intro'>
             <p class='section-header'> About Me </p>
             <p>
@@ -23,7 +23,7 @@
             </p>
             <p>
                 In addition, I also do projects in my free time. <span class='text-link' uri='projects'> Here are a few
-                of them </span>. I am primarily interested in data science and what our behaviors can tell us about 
+                of them</span>. I am primarily interested in data science and what our behaviors can tell us about 
                 ourselves and humanity as a whole.
             </p>
             <p>

@@ -64,8 +64,23 @@ framework_skills = [
 ]
 
 @app.route("/")
+@app.route('/home')
 def main():
     navbar_collection.set_active("home")
     return render_template("main.html", navbarItems=navbar_collection.get_tabs(), progSkills=prog_skills+framework_skills)
+
+@app.route('/projects')
+def projects():
+    navbar_collection.set_active("projects")
+    return render_template('projects.html', navbarItems=navbar_collection.get_tabs())
+
+@app.route('/contact')
+def contacts():
+    navbar_collection.set_active('contact')
+    return render_template('contacts.html', navbarItems=navbar_collection.get_tabs())
+
+@app.route("/<path:path>")
+def badroute(path):
+    return "Unfounded route: " + path
 
 app.run(debug=True, port=3000)

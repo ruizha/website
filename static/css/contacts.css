@@ -1,0 +1,20 @@
+.contact-methods {
+  display: flex;
+  flex-flow: column;
+  margin-top: 10px;
+  width: 300px; }
+
+.contact-element {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center; }
+  .contact-element p {
+    font-size: 12px; }
+
+img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; }
+
+/*# sourceMappingURL=contacts.css.map */

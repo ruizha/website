@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block stylesheets %}
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/contacts.css') }}">
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/contacts.js') }}"></script>
+{% endblock %}
+{% block header %}
+    <div class='page-header'>
+        <p> How You Could Reach Me </p>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class='content'>
+        <div class='intro'>
+            If, for whatever reason, you want to contact me to talk about my projects or my experiences, you can reach me by:
+        </div>
+        <div class='contact-methods'>
+            <div class='contact-element'>
+                <img src="{{ url_for('static', filename='images/email.png') }}">
+                <p> My primary method of contact is through my email: r.zhang194@gmail.com </p>
+            </div>
+            <div class='contact-element'>
+                <img src="{{ url_for('static', filename='images/resume.png') }}">
+                <p> You can also have a look at my resume, which is updated as frequently as possible. </p>
+            </div>
+            <div class='contact-element'>
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}">
+                <p> You can also check out my LinkedIn.
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -2,18 +2,23 @@
 <html>
     <head>
         <!-- stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet"> 
         <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/base.css') }}">
         {% block stylesheets %}{% endblock %}
 
         <!-- scripts -->
+		<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
         <script src="{{ url_for('static', filename='js/base.js') }}"></script>
         {% block scripts %}{% endblock %}
     </head>
     <body>
         <div class='navbar'>
             {% for item in navbarItems %}
-                <div class='navbar-item-element {% if item.active %} active-tab {% else %} {% endif %}'
-                     id='nav-element-{{ item.name}}'>
+                <div class='navbar-item-element {% if item.active %} active-tab {% else %} {% endif %}' uri='{{ item.name }}'>
                     <p class='navbar-item-text' id='nav-element-{{ item.name }}-text'> {{ item.text }} </p>
                 </div>
             {% endfor %}
