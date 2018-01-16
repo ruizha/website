@@ -3,18 +3,25 @@ html {
   width: 100%;
   display: flex;
   flex-flow: column;
-  align-items: center; }
+  align-items: center;
+  background: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
   width: 40%;
   display: flex;
   flex-flow: column;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 0; }
 
 .navbar {
   width: 100%;
-  height: 30px;
+  height: 40px;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -34,20 +41,28 @@ body {
   font-size: 30px; }
 
 .active-tab {
-  color: #444444 !important; }
+  color: white !important;
+  background: #444444; }
 
 .navbar-item-element {
-  height: 50px;
+  height: 100%;
   width: 125px;
   color: #000000;
   cursor: pointer;
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: 0.7s all ease; }
 
 .navbar-item-element:hover {
   color: white;
-  background: #adc9f7; }
+  background: #444444; }
+
+.text-link {
+  color: #8aabe2; }
+
+.deactivate {
+  text-decoration: line-through; }
 
 /*# sourceMappingURL=base.css.map */

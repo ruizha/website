@@ -16,7 +16,7 @@
 .skill-rating-dot {
     width: 10px;
     height: 10px;
-    background: #8ccef2;
+    /*background: #8ccef2;*/
     margin-right: 10px;
     border-radius: 10px;
 }
@@ -30,4 +30,24 @@
 
 .skill-name {
     width: 300px;
+}
+
+.level-0 {
+    background: #ff6d6d;
+}
+
+.level-1 {
+    background: #ffba6d;
+}
+
+.level-2 {
+    background: #ffed6d;
+}
+
+.level-3 {
+    background: #d5ff6d;
+}
+
+.level-4 {
+    background: #6fff6d;
 }

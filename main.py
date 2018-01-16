@@ -37,6 +37,7 @@ class Skill:
 
 navbar_items = [
     NavbarItem("home", "Home"),
+    NavbarItem("work", "Work"),
     NavbarItem("projects", "Projects"),
     NavbarItem("contact", "Contact Me")
 ]
@@ -78,6 +79,11 @@ def projects():
 def contacts():
     navbar_collection.set_active('contact')
     return render_template('contacts.html', navbarItems=navbar_collection.get_tabs())
+
+@app.route('/work')
+def work():
+    navbar_collection.set_active('work')
+    return render_template('work.html', navbarItems=navbar_collection.get_tabs())
 
 @app.route("/<path:path>")
 def badroute(path):

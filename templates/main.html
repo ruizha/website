@@ -18,7 +18,7 @@
                 Greetings! My name is Rui Zhang and I am currently a junior at Rutgers University-New Brunswick pursuing
                 a B.Sc. in Computer Science and Mathematics. I am currently employed at Rutgers-OIT Open Solution Systems
                 tasked with developing Rutgers' university-wide Android mobile application and the backend services which
-                it relies on. Click <span class='text-link' uri='work#oss'> here </span> for an overview of what I
+                it relies on. Click <span class='text-link' uri='work#oss'>here</span> for an overview of what I
                 do.
             </p>
             <p>
@@ -47,7 +47,7 @@
                     <div class='skill-name' id='skill-{{ skill.name }}-text'><p> {{ skill.text }} </p></div>
                     <div class='skill-rating' id='skill-{{ skill.name }}-rating'>
                         {% for i in range(skill.rating) %}
-                            <div class='skill-rating-dot'></div>
+                            <div class='skill-rating-dot level-{{ i }}'></div>
                         {% endfor %}
                     </div>
                 </div>
