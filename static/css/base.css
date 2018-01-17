@@ -62,6 +62,9 @@ body {
 .text-link {
   color: #8aabe2; }
 
+.link-nt {
+  cursor: pointer; }
+
 .deactivate {
   text-decoration: line-through; }
 
