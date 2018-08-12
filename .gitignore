@@ -2,3 +2,4 @@ web
 website
 .sass-cache
 __pycache__
+venv
