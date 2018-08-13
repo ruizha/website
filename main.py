@@ -78,7 +78,7 @@ tools = [
 def main():
     navbar_collection.set_active("home")
     return render_template("main.html", navbarItems=navbar_collection.get_tabs(), \
-        skills={'Programming': languages, 'Frameworks': frameworks, 'Tools': tools})
+        skills=[('Programming', languages), ('Frameworks', frameworks), ('Tools', tools)])
 
 @app.route('/projects')
 def projects():

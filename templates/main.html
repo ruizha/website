@@ -50,8 +50,8 @@
             <div class='skills-list'>
                 {% for category in skills %}
                     <div class='skills-sublist'>
-                        <div class='skills-category-header'> {{ category }} </div>
-                        {% for item in skills[category] %}
+                        <div class='skills-category-header'> {{ category[0] }} </div>
+                        {% for item in category[1] %}
                             <div class='skill-element-container' id='skill-{{ item.name }}'>
                                 <div class='skill-name' id='skill-{{ item.name }}-text'><p> {{ item.text }} </p></div>
                                 <div class='skill-rating' id='skill-{{ item.name }}-rating'>
