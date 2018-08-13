@@ -43,32 +43,42 @@ navbar_items = [
 ]
 
 navbar_collection = NavbarItemCollection(navbar_items)
-prog_skills = [
+
+languages = [
     Skill('python', "Python", 5),
     Skill("javascript", "JavaScript", 5),
     Skill("java", "Java", 5),
     Skill('kotlin', 'Kotlin', 4),
-    Skill('c', "C", 4),
-    Skill('cpp', 'C++', 3),
-    Skill('sql', 'SQL', 4)
+    Skill('c', "C/C++", 4),
+    Skill('sql', 'SQL', 4),
+    Skill('html', 'HTML', 5),
+    Skill('css', 'CSS', 4),
 ]
 
-framework_skills = [
+frameworks = [
     Skill("flask", "Flask", 5),
-    Skill("rxjava", "RxJava", 5),
-    Skill("android", "Android", 5),
+    Skill("django", "Django", 4),
+    Skill("rxjava", "RxJava", 4),
+    Skill("android", "Android", 4),
     Skill("nodejs", "Node.js", 4),
     Skill("expressjs", "Express.js", 4),
-    Skill("mysql", "MySQL/MariaDB", 5),
     Skill("nginx", "Nginx", 3),
-    Skill("docker", "Docker", 3)
+    Skill("docker", "Docker", 3),
+]
+
+tools = [
+    Skill('linux', 'Linux', 4),
+    Skill('git', 'Git', 4),
+    Skill('vim', 'Vim', 5),
+    Skill('digitalocean', 'DigitalOcean', 3),
 ]
 
 @app.route("/")
 @app.route('/home')
 def main():
     navbar_collection.set_active("home")
-    return render_template("main.html", navbarItems=navbar_collection.get_tabs(), progSkills=prog_skills+framework_skills)
+    return render_template("main.html", navbarItems=navbar_collection.get_tabs(), \
+        skills={'Programming': languages, 'Frameworks': frameworks, 'Tools': tools})
 
 @app.route('/projects')
 def projects():

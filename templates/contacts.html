@@ -16,8 +16,8 @@
             If, for whatever reason, you want to contact me to talk about my projects or my experiences, you can reach me by:
         </div>
         <div class='contact-methods'>
-            <div class='contact-element link-nt' uri='https://github.com/Rui-Zhang1997'>
-                <a class='contacts-link' href='https://github.com/Rui-Zhang1997'>
+            <div class='contact-element'>
+                <a class='contacts-link' href='https://github.com/Rui-Zhang1997' target='_blank'>
                     <img src="{{ url_for('static', filename='images/github.png') }}">
                     <p> Feel free to take a look at my Github! </p>
                 </a>
@@ -27,15 +27,19 @@
                 <p> My primary method of contact is through my email:
                     <span id='email-text'>r.zhang194@gmail.com<span>
                 </p>
-                <p class='fadeInOut' value=500 style='visibility: hidden;'> Copied! </p>
+                <p class='fadeInOut' id='copied-text' value=500 style='visibility: hidden;'> Copied! </p>
             </div>
             <div class='contact-element'>
-                <img src="{{ url_for('static', filename='images/resume.png') }}">
-                <p> You can also have a look at my resume, which is updated as frequently as possible. </p>
+                <a class='contacts-link' href='https://www.dropbox.com/s/6deebimrtioij1g/RuiZhang_Resume_Aug2018-Flattened.pdf?dl=1'>
+                    <img src="{{ url_for('static', filename='images/resume.png') }}">
+                    <p> You can also have a look at my resume, which is updated as frequently as possible </p>
+                </a>
             </div>
-            <div class='contact-element link-nt' uri='https://www.linkedin.com/in/rui-zhang-ba016510b/'>
-                <img src="{{ url_for('static', filename='images/linkedin.png') }}">
-                <p> You can also check out my LinkedIn.
+            <div class='contact-element'>
+                <a class='contacts-link' href='https://www.linkedin.com/in/rui-zhang-ba016510b/' target='_blank'>
+                    <img src="{{ url_for('static', filename='images/linkedin.png') }}">
+                    <p> You can also check out my LinkedIn </p>
+                </a>
             </div>
         </div>
     </div>

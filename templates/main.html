@@ -15,16 +15,21 @@
         <div class='section' id='section-intro'>
             <p class='section-header'> About Me </p>
             <p>
-                Greetings! My name is Rui Zhang and I am currently a junior at Rutgers University-New Brunswick pursuing
-                a B.Sc. in Computer Science and Mathematics. I am currently employed at Rutgers-OIT Open Solution Systems
-                tasked with developing Rutgers' university-wide Android mobile application and the backend services which
-                it relies on. Click <a class='text-link' href='/work#oss'>here</a> for an overview of what I
-                do.
+                Greetings! My name is Rui Zhang and I am currently a senior at Rutgers University-New
+                Brunswick pursuing a B.Sc. in Computer Science and Mathematics. I have just recently
+                completed an internship with Royal Bank of Canada (RBC) at their Jersey City office and will
+                return to my employment at Rutgers-OIT Open Solution Systems, where I am tasked with
+                developing Rutgers' university-wide Android mobile application and the backend services on
+                which it relies on. Click <a class='text-link' href='/work#oss'>here</a> for an overview
+                of what I do and have done.
             </p>
             <p>
-                In addition, I also do projects in my free time. <a class='text-link' href='/projects'> Here are a few
-                of them</a>. I am primarily interested in data science and what our behaviors can tell us about 
-                ourselves and humanity as a whole.
+                In addition, I also do quite a few projects. <a class='text-link' href='/projects'>
+                Here are a few of them</a>. Most of my work, and what I am most comfortable with, is in
+                backend development. I enjoy seeing and working on the pipeline between the data and the
+                end user as well as what conclusions and insights that data can bring about a particular
+                user, group, or dataset. However, when the time calls, I am just as comfortable diving into
+                that frontend and writing out some CSS, HTML, and Javascript when the time calls.
             </p>
             <p>
 
@@ -36,23 +41,34 @@
                 <li> <span class='bold'> Design and Analysis of Computer Algorithms (01:198:344) </span> Gave me an in-depth look and a greater understanding of the strengths and weaknesses of algorithms and how to apply them in different situation </li>
                 <li> <span class='bold'> Principles of Information and Data Management (01:198:336) </span> An interesting view into the theory and internal workings of various DBMS's </li>
                 <li> <span class='bold'> Introduction to Artifical Intelligence (01:640:440) </span> I took this class expecting to because I wanted to work with artificial intelligence. I came out of it wanting to work with Big Data because I learned that is what I really wanted to do. </li>
-                <li> <span class='bold'> Systems Programming </span> One of my favorite classes, taught by Professor Tjang. Through this course I learned how multithreading and multiprocessing really worked under the surface. I also got really good at C afterwards. </li>
-                <li> <span class='bold'> Computer Architectures </span> I learned how C works and found myself oddly enjoying it. Assembly and the Execution Stack were also pretty cool. </li>
+                <li> <span class='bold'> Operating Systems (01:198:416) </span> While I do not really see myself doing any OS programming in the near future, this class is extremely useful to me whenever I am doing low-level programming such as using C/C++ and working with microprocessors. The information about memory management is also very helpful in understanding garbage collectors of various languages, interpreters, and compilers (especially those times when the JVM starts leaking memory).
+                <li> <span class='bold'> Systems Programming (01:198:214) </span> One of my favorite classes, taught by Professor Tjang. Through this course I learned how multithreading and multiprocessing really worked under the surface. I also got really good at C afterwards. </li>
+                <li> <span class='bold'> Computer Architectures (01:198:211) </span> I learned how C works and found myself oddly enjoying it. Assembly and the Execution Stack were also pretty cool. </li>
         </div>
         <div class='section' id='section-skills'>
-            <p class='section-header'> What I Can Do </p>
+            <p class='section-header'> What I Can Do  </p>
             <div class='skills-list'>
-            {% for skill in progSkills %}
-                <div class='skill-element-container' id='skill-{{ skill.name }}'>
-                    <div class='skill-name' id='skill-{{ skill.name }}-text'><p> {{ skill.text }} </p></div>
-                    <div class='skill-rating' id='skill-{{ skill.name }}-rating'>
-                        {% for i in range(skill.rating) %}
-                            <div class='skill-rating-dot level-{{ i }}'></div>
+                {% for category in skills %}
+                    <div class='skills-sublist'>
+                        <div class='skills-category-header'> {{ category }} </div>
+                        {% for item in skills[category] %}
+                            <div class='skill-element-container' id='skill-{{ item.name }}'>
+                                <div class='skill-name' id='skill-{{ item.name }}-text'><p> {{ item.text }} </p></div>
+                                <div class='skill-rating' id='skill-{{ item.name }}-rating'>
+                                    {% for i in range(item.rating) %}
+                                        <div class='skill-rating-dot level-{{ i }}'></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
                         {% endfor %}
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
             </div>
+            <p style='font-size: 12px;'> (5 - I can do it if StackOverflow goes down,
+                 4 - I can do it but might need the docs,
+                 3 - I can do it but I will definitely need the docs,
+                 2 - I have touched it once,
+                 1 - I know that it exists) </p>
         </div>
     </div>
 {% endblock %}

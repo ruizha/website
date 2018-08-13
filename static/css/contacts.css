@@ -4,12 +4,12 @@
   margin-top: 10px;
   width: 300px; }
 
-.contact-element {
+.contact-element, .contact-element a {
   display: flex;
   flex-flow: row;
   width: 100%;
   align-items: center; }
-  .contact-element p {
+  .contact-element p, .contact-element a p {
     font-size: 12px; }
 
 img {
@@ -20,5 +20,13 @@ img {
 .contacts-link {
   display: flex;
   flex-flow: row; }
+  .contacts-link p {
+    color: #000000; }
+
+.contact-element:hover {
+  cursor: pointer; }
+
+#copied-text {
+  margin-right: -10px; }
 
 /*# sourceMappingURL=contacts.css.map */

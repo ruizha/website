@@ -1,4 +1,15 @@
+.skills-category-header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .skills-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 20px;
+}
+
+.skills-sublist {
     display: flex;
     flex-flow: column;
 }
@@ -29,7 +40,7 @@
 }
 
 .skill-name {
-    width: 300px;
+    width: 200px;
 }
 
 .level-0 {
