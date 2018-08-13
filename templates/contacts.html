@@ -17,12 +17,17 @@
         </div>
         <div class='contact-methods'>
             <div class='contact-element link-nt' uri='https://github.com/Rui-Zhang1997'>
-                <img src="{{ url_for('static', filename='images/github.png') }}">
-                <p> Feel free to take a look at my Github! </p>
+                <a class='contacts-link' href='https://github.com/Rui-Zhang1997'>
+                    <img src="{{ url_for('static', filename='images/github.png') }}">
+                    <p> Feel free to take a look at my Github! </p>
+                </a>
             </div>
-            <div class='contact-element'>
+            <div class='contact-element' id='email'>
                 <img src="{{ url_for('static', filename='images/email.png') }}">
-                <p> My primary method of contact is through my email: r.zhang194@gmail.com </p>
+                <p> My primary method of contact is through my email:
+                    <span id='email-text'>r.zhang194@gmail.com<span>
+                </p>
+                <p class='fadeInOut' value=500 style='visibility: hidden;'> Copied! </p>
             </div>
             <div class='contact-element'>
                 <img src="{{ url_for('static', filename='images/resume.png') }}">

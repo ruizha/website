@@ -12,6 +12,7 @@
 			  src="https://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/helpers.js') }}"></script>
         <script src="{{ url_for('static', filename='js/base.js') }}"></script>
         {% block scripts %}{% endblock %}
     </head>
@@ -19,7 +20,7 @@
         <div class='navbar'>
             {% for item in navbarItems %}
                 <div class='navbar-item-element {% if item.active %} active-tab {% else %} {% endif %}' uri='{{ item.name }}'>
-                    <p class='navbar-item-text' id='nav-element-{{ item.name }}-text'> {{ item.text }} </p>
+                    <a class='navbar-item-text {% if item.active %} active-tab {% else %} {% endif %}' id='nav-element-{{ item.name }}-text' href='/{{ item.name }}'> {{ item.text }} </a>
                 </div>
             {% endfor %}
         </div>

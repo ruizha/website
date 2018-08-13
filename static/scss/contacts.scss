@@ -20,3 +20,16 @@ img {
     height: 30px;
     margin-right: 10px;
 }
+
+.contacts-link {
+    display: flex;
+    flex-flow: row;
+}
+
+.contact-element:hover {
+    cursor: pointer;
+}
+
+#email-text {
+    margin-left: 10px;
+}

@@ -49,25 +49,31 @@ body {
 }
 
 .active-tab {
-    color: white !important;
     background: $color-selected;
+    a {
+        color: #ffffff;
+    }
 }
 
 .navbar-item-element {
     height: 100%;
     width:  125px;
-    color: #000000;
     cursor: pointer;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     transition: 0.7s all ease;
+    a:not(.active-tab) {
+        color: #000000;
+    }
 }
 
 .navbar-item-element:hover {
-    color: white;
     background: $color-selected;
+    a {
+        color: white;
+    }
 }
 
 .text-link {
@@ -80,4 +86,8 @@ body {
 
 .deactivate {
     text-decoration: line-through;
+}
+
+a:link, a:visited {
+    text-decoration: none;
 }

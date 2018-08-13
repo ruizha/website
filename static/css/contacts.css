@@ -17,4 +17,8 @@ img {
   height: 30px;
   margin-right: 10px; }
 
+.contacts-link {
+  display: flex;
+  flex-flow: row; }
+
 /*# sourceMappingURL=contacts.css.map */
