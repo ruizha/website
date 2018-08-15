@@ -41,8 +41,9 @@ body {
   font-size: 30px; }
 
 .active-tab {
-  background: #444444; }
-  .active-tab a {
+  background: #444444;
+  text-decoration: none; }
+  .active-tab p {
     color: #ffffff; }
 
 .navbar-item-element {
@@ -53,13 +54,14 @@ body {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  transition: 0.7s all ease; }
-  .navbar-item-element a:not(.active-tab) {
+  transition: 0.7s all ease;
+  text-decoration: none; }
+  .navbar-item-element p:not(.active-tab) {
     color: #000000; }
 
 .navbar-item-element:hover {
   background: #444444; }
-  .navbar-item-element:hover a {
+  .navbar-item-element:hover p {
     color: white; }
 
 .text-link {

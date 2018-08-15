@@ -50,7 +50,8 @@ body {
 
 .active-tab {
     background: $color-selected;
-    a {
+    text-decoration: none;
+    p {
         color: #ffffff;
     }
 }
@@ -64,14 +65,15 @@ body {
     align-items: center;
     justify-content: center;
     transition: 0.7s all ease;
-    a:not(.active-tab) {
+    text-decoration: none;
+    p:not(.active-tab) {
         color: #000000;
     }
 }
 
 .navbar-item-element:hover {
     background: $color-selected;
-    a {
+    p {
         color: white;
     }
 }
