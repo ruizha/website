@@ -75,12 +75,12 @@ tools = [
 ]
 
 lfj_subtitles = [
-    'Looking for Job',
+    'Looking for job',
     '"...a fine choice" ~ everyone',
     '<span><a href="https://www.dropbox.com/s/6deebimrtioij1g/RuiZhang_Resume_Aug2018-Flattened.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
-    'Graduating this Semester',
-    'Are You a Recruiter?',
-    'Coder For Hire'
+    'Graduating this semester',
+    'Are you a recruiter?',
+    'Coder for hire'
 ]
 
 working_subtitles = [

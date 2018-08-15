@@ -1,6 +1,11 @@
 .page-header {
     display: flex;
     flex-flow: column;
+    margin-bottom: 20px;
+
+    .header-title {
+        margin-bottom: 0px;
+    }
 
     .subtitle {
         font-size: 18px;
