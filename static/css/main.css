@@ -1,3 +1,16 @@
+.page-header {
+  display: flex;
+  flex-flow: column; }
+  .page-header .subtitle {
+    font-size: 18px; }
+    .page-header .subtitle a {
+      color: #000000; }
+    .page-header .subtitle a:link a:visited {
+      color: #000000; }
+    .page-header .subtitle a:hover {
+      color: #666666;
+      cursor: pointer; }
+
 .skills-category-header {
   font-size: 18px;
   font-weight: bold; }

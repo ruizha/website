@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import random
 
 app = Flask(__name__)
 
@@ -73,11 +74,52 @@ tools = [
     Skill('digitalocean', 'DigitalOcean', 3),
 ]
 
+lfj_subtitles = [
+    'Looking for Job',
+    '"...a fine choice" ~ everyone',
+    '<span><a href="https://www.dropbox.com/s/6deebimrtioij1g/RuiZhang_Resume_Aug2018-Flattened.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
+    'Graduating this Semester',
+    'Are You a Recruiter?',
+    'Coder For Hire'
+]
+
+working_subtitles = [
+    'Working at a Cool Place',
+    'I Am Taken',
+    'Enjoying my Time',
+    'Currently Bug Slaying',
+    'Employed'
+]
+
+subtitles = [
+    'Trader of Memes',
+    'Bug Slayer',
+    'Spittin\' Hot Lines',
+    'Vim User',
+    'Prevently Segfaults'
+]
+
+class SubtitleDistribution:
+    def __init__(self, subtitles):
+        self.distribution = {subtitle: 0 for subtitle in subtitles}
+
+    def get_subtitle(self):
+        total = sum(self.distribution.values()) + 1
+        inverted = {k: total - v for k,v in self.distribution.items()}
+        choices = []
+        for k,v in inverted.items():
+            choices += [k] * v
+        subtitle = random.choice(choices)
+        self.distribution[subtitle] += 1
+        return subtitle
+            
+subtitle_distribution = SubtitleDistribution(lfj_subtitles)
 @app.route("/")
 @app.route('/home')
 def main():
     navbar_collection.set_active("home")
-    return render_template("main.html", navbarItems=navbar_collection.get_tabs(), \
+    return render_template("main.html", subtitle=subtitle_distribution.get_subtitle(), \
+        navbarItems=navbar_collection.get_tabs(), \
         skills=[('Programming', languages), ('Frameworks', frameworks), ('Tools', tools)])
 
 @app.route('/projects')
