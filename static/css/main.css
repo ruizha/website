@@ -6,11 +6,11 @@
     margin-bottom: 0px; }
   .page-header .subtitle {
     font-size: 18px; }
-    .page-header .subtitle a {
+    .page-header .subtitle a:not(.text-link) {
       color: #000000; }
-    .page-header .subtitle a:link a:visited {
+    .page-header .subtitle a:link a:visited:not(.text-link) {
       color: #000000; }
-    .page-header .subtitle a:hover {
+    .page-header .subtitle a:hover:not(.text-link) {
       color: #666666;
       cursor: pointer; }
 

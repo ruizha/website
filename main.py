@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import random
 
 app = Flask(__name__)
-
+DEBUG = True
 class NavbarItem:
     def __init__(self, name, text, active=False):
         self.name = name
@@ -38,9 +38,9 @@ class Skill:
 
 navbar_items = [
     NavbarItem("home", "Home"),
-    NavbarItem("work", "Work"),
+    NavbarItem("work", "Where I Worked"),
     NavbarItem("projects", "Projects"),
-    NavbarItem("contact", "Contact Me")
+    NavbarItem("contact", "Get In Touch")
 ]
 
 navbar_collection = NavbarItemCollection(navbar_items)
@@ -77,7 +77,7 @@ tools = [
 lfj_subtitles = [
     'Looking for job',
     '"...a fine choice" ~ everyone',
-    '<span><a href="https://www.dropbox.com/s/6deebimrtioij1g/RuiZhang_Resume_Aug2018-Flattened.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
+    '<span><a class=\'text-link\' href="https://www.dropbox.com/s/6deebimrtioij1g/RuiZhang_Resume_Aug2018-Flattened.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
     'Graduating this semester',
     'Are you a recruiter?',
     'Coder for hire'
@@ -94,9 +94,10 @@ working_subtitles = [
 subtitles = [
     'Trader of Memes',
     'Bug Slayer',
+    'Code Slinger',
     'Spittin\' Hot Lines',
-    'Vim User',
-    'Prevently Segfaults'
+    'Vim and Emacs are both good',
+    'Preventing Segfaults'
 ]
 
 class SubtitleDistribution:
@@ -142,4 +143,7 @@ def badroute(path):
     return "Unfounded route: " + path
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    if DEBUG:
+        app.run(debug=True, port=8080)
+    else:
+        app.run(ip='0.0.0.0')
