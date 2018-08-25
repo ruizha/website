@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import random
 
 app = Flask(__name__)
-DEBUG = True
+DEBUG = False
 class NavbarItem:
     def __init__(self, name, text, active=False):
         self.name = name
@@ -146,4 +146,4 @@ if __name__ == '__main__':
     if DEBUG:
         app.run(debug=True, port=8080)
     else:
-        app.run(ip='0.0.0.0')
+        app.run(host='0.0.0.0')
