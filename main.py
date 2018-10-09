@@ -40,7 +40,7 @@ navbar_items = [
     NavbarItem("home", "Home"),
     NavbarItem("work", "Where I Worked"),
     NavbarItem("projects", "Projects"),
-    NavbarItem("contact", "Get In Touch")
+    NavbarItem("contact", "More About Me")
 ]
 
 navbar_collection = NavbarItemCollection(navbar_items)
@@ -77,7 +77,7 @@ tools = [
 lfj_subtitles = [
     'Looking for job',
     '"...a fine choice" ~ everyone',
-    '<span><a class=\'text-link\' href="https://www.dropbox.com/s/6deebimrtioij1g/RuiZhang_Resume_Aug2018-Flattened.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
+    '<span><a class=\'text-link\' href="https://www.dropbox.com/s/nvtbp6si16ng24b/rui_zhang_resume.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
     'Graduating this semester',
     'Are you a recruiter?',
     'Coder for hire'

@@ -17,52 +17,46 @@
                 Royal Bank of Canada API Catalogue (Jun. 2018 - Aug. 2018)
             </div>
             <div class='project-desc'>
-                RBCCM has a large number of internal APIs developed by its many teams, from traders to programmers, and there should be a central place where people can search and experiment with the APIs. As such, the 2018 Summer Intern Class was tasked with creating an API Catalogue where RBC developers can onboard their APIs and have it be visible to RBCCM as well as other groups such as Investor and Treasury Services. I worked in a full-stack role, designing and implementing backend and, whenever needed, the frontend as well. Our backend stack consisted of Python 3 and Django with DRF and a SQL database. Our frontend utilized ReactJS to allow for more responsive pages, SASS/SCSS, and TypeScript. In addition, all the were required to write unit tests and perform code reviews before any code is merged into the development branch, which is then checked by JenkinsCI and merged to our mainline. In addition, worked in an Agile environment and we rotated Scrum Master duties every sprint amongst the team members.
+                RBCCM has a large number of internal APIs developed by its many teams, from traders to programmers, and there should be a central place where people can
+                search and experiment with the APIs. As such, the 2018 Summer Intern Class was tasked with creating an API Catalogue where RBC developers can onboard their APIs
+                and have it be visible to RBCCM as well as other groups such as Investor and Treasury Services. Every team performed in a full-stack capacity, designing and implementing
+                both frontend and backend. The application was built by following MVC principles.
+                We made a RESTful backend using Django REST Framework and SQL Server. We developed a responsive frontend
+                using React.js and SASS. We deployed to a Redhat Linux Machine using JenkinsCI. Application was tested using Python's unittest and Nose libraries.
             </div>
         </div>
         <div class='subsection project-subsection'>
             <div class='subsection-name bold'> Rutgers Android Application (Jan. 2017 - Now) </div>
             <div class='project-desc'>
-                This is my primary and ongoing responsibility at work: the development and maintenance of the mobile application for our University. 
-                The purpose of the application is so that the University can deliver information to its students, faculty, and all who is concerned
-                in a timely and efficient manner. This includes everything from class availability to the arrival and transit times of the University's Bus System
-                to what is showing at the campus cinema. We provide this infomration to 20,000+ users everyday. As the primary developer, I have
-                implemented major changes and additions to the application. These include a complete overhaul of the Schedule of Classes, Bus Tracking Module, Cinema
-                Module, among others. In addition, I also resolve any bugs relating to the application. Our primary libraries is Android, RxJava, and Retrofit.
+                During the semester, I work on the official Rutgers Android Application at Rutgers OIT-OSS which is used by 30,000+ simultaneous users. The application is
+                built using MVP principles. RxJava is used extensively throughout the application in conjunction with Retrofit2 for Async I/O and state/event management. FCM/GCM is used
+                to send notifications to users regarding bus arrivals and departures (and whatever other notices that we are required to send). Other libraries that
+                we use include Picasso for image processing and Apache Commons. Application was tested using JUnit.
             </div>
         </div>
         <div class='subsection project-subsection'>
             <div class='subsection-name bold'> Rutgers Mobile Backend (Mar. 2017 - Now) </div>
-            This is the backend that the mobile applications relies on. Because we rely on many APIs from different sources, whether from within Rutgers or otherwise,
-            we have to be able to account for different data transmission formats, rapid API changes, and large datasets. It would be very difficult to do all of this
-            on the client and therefore the server was created. It was built using the Express.js framework with MariaDB as our database. I started working on it in
-            March, 2017 and since August its development has rested solely upon me.
-        </div>
-        <!-- <div class='subsection project-subsection'>
-            <div class='subsection-name bold'> Photoanalyser (Jan. 2018) </div>
-            I went on a trip to California, traveling to such places as Big Sur National Park and the Grand Canyon. However, I took too many photos, many of them of the
-            same scene. Therefore, it would be a pain to sort all of these out. I remembered reading somewhere that using FFTs one can determine
-            the blurriness of an image and I thought I would build a tool that would be able to discern between the good photographs and those that are too shaky to keep.
-            Even though it probably would have taken less time to simply look through the photographs myself and choose the good ones, using a week to write this program
-            taught me about FFTs, signal processing, and various libraries such as NumPy and SciPy. I wrote this in Python 3.
-        </div> -->
+                In addition to the mobile application, I also develop the backend that serves as a data aggregation service, pulling data from various departments
+                and services, like Transloc for monitoring the University's bus system and Schedule of Classes for class availability and scheduling, converting
+                them into a standardized format, before delivering it to Android and iOS clients. It is a RESTful API built using Express.js. MongoDB is used for data storage.
+                It is containerized on Docker and Docker Swarm so the application can be deployed on E-Discovery VMs. Mocha and Chai are used for
+                unit tests.
+            </div>
         <div class='subsection project-subsection'>
             <div class='subsection-name bold'> HackRU Ideaboard (Sept. 2017 - Nov. 2017) </div>
-            The primary goal of a hackathon is working on a team to solve a particular problem. But unless one comes with a team in mind, finding that team might be
-            difficult. I helped to build the Ideaboard for HackRU, which is meant to help HackRU attendees form groups. Ideaboard is a Slackbot that allows attendees
-            to list their project ideas and see the ideas of others, so that everyone could see if there is any project that interests them. So instead of having to
-            ask around and potentially miss the chance to help on a project that one likes, one can just use the Ideaboard, see all the projects that are recruiting
-            and what skills the project requires, and sign on with them.
-        </div>
+                The primary goal of a hackathon is working on a team to solve a particular problem. But unless one comes with a team in mind, finding that team might be
+                difficult. I helped to build the Ideaboard for HackRU, which is meant to help HackRU attendees form groups. Ideaboard is a Slackbot that allows attendees
+                to list their project ideas and see the ideas of others, so that everyone could see if there is any project that interests them. So instead of having to
+                ask around and potentially miss the chance to help on a project that one likes, one can just use the Ideaboard, see all the projects that are recruiting
+                and what skills the project requires, and sign on with them.
+            </div>
         <div class='subsection project-subsection'>
-            <div class='subsection-name bold'> ProtoPy (Oct. 2016) </div>
-            A Hackathon project for HackRU 2016. My team and I were inspired by Scratch, a tool developed specifically to introduce programming concepts and
-            ideas. Scratch uses flow-diagrams to allow learners to learn the concepts without having to worry about language-specific things such as syntax.
-            However, we wanted to do something similar but allow these flow-diagrams to be of actual use to its users. Therefore, we needed to convert the
-            flow-diagrams into an actaul, readable programming language. We decided on Python for its simplicity. The language has several other advantages, including
-            its ease of readability, so that the users can learn to read the program without much training, as well as its widespread adoption by the industry. Thus,
-            instead of creating something only that learners can run from inside Scratch, we made it so that the users can see the real-world impact of their
-            efforts.
+            <div class='subsection-name bold'> InvestWell (Oct. 2018) </div>
+                Project for HackRU Fall 2018 where we developed an application to give financial advice to users based on users with similar financial backgrounds. We used
+                the Yodlee API to gather data about users, extracting only non-identifying information about each user, and cluster using K-Means. We used a Multi-Layer Perceptron
+                to determine the fitness of a person's portfolio based on others in the cluster. Frontend was built using Angular.js, backend in Flask and MongoDB. For
+                machine learning we used scikit-learn.
+            </div>
         </div>
     </div>
 {% endblock %}
