@@ -79,7 +79,6 @@ lfj_subtitles = [
     '"...a fine choice" ~ everyone',
     '<span><a class=\'text-link\' href="https://www.dropbox.com/s/nvtbp6si16ng24b/rui_zhang_resume.pdf?dl=1" style="text-decoration: none;">Here\'s my resume</a></span>',
     'Graduating this semester',
-    'Are you a recruiter?',
     'Coder for hire'
 ]
 
@@ -93,35 +92,29 @@ working_subtitles = [
 
 subtitles = [
     'Trader of Memes',
-    'Bug Slayer',
-    'Code Slinger',
     'Spittin\' Hot Lines',
     'Vim and Emacs are both good',
-    'Preventing Segfaults'
+    'Preventing Segfaults',
+    'Driven by a Natural Neurel Net',
+    'I sometimes use a light theme',
+    '<br>Traceback (most recent call last):<br><span style="padding-left: 2em">File "&lt;main.py&gt;", line 1, in</span> -- <br>jk I unittested this'
 ]
 
 class SubtitleDistribution:
     def __init__(self, subtitles):
-        self.distribution = {subtitle: 0 for subtitle in subtitles}
+        pass
 
     def get_subtitle(self):
-        total = sum(self.distribution.values()) + 1
-        inverted = {k: total - v for k,v in self.distribution.items()}
-        choices = []
-        for k,v in inverted.items():
-            choices += [k] * v
-        subtitle = random.choice(choices)
-        self.distribution[subtitle] += 1
-        return subtitle
+        return random.choice(subtitles)
             
-subtitle_distribution = SubtitleDistribution(lfj_subtitles)
+subtitle_distribution = SubtitleDistribution(subtitles)
 @app.route("/")
 @app.route('/home')
 def main():
     navbar_collection.set_active("home")
     return render_template("main.html", subtitle=subtitle_distribution.get_subtitle(), \
         navbarItems=navbar_collection.get_tabs(), \
-        skills=[('Programming', languages), ('Frameworks', frameworks), ('Tools', tools)])
+        skills=[('Programming Languages', languages), ('Frameworks', frameworks), ('Tools', tools)])
 
 @app.route('/projects')
 def projects():
