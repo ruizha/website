@@ -1,12 +1,16 @@
 $(function () {
-    if ($(window).width() < 1200) { // janky attempt to cater to mobile users
-        $('body').css('width', '95%');
-        $('body').css('padding', '20px');
-    }
-    $('.link-nt').click(function () {
-        if (!$(this).attr('class').includes('deactivate')) {
-            let win = window.open($(this).attr('uri'), '_blank');
-            win.focus();
+    const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase());
+    const origWidth = $('body').css("width");
+    const origPadding = $('body').css("padding");
+    $(window).resize(() => {
+        if (($(window).width() < 1000) || isMobile) { // janky attempt to cater to mobile users
+            console.log("Resizing...");
+            $('body').css('width', '95%');
+            $('body').css('padding', '20px');
+        } else if (!isMobile)  {
+            console.log("Resizing orig...");
+            $('body').css('width', origWidth);
+            $('body').css("padding", origPadding);
         }
     });
 });

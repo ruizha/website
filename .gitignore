@@ -3,3 +3,5 @@ website
 .sass-cache
 __pycache__
 venv
+**/*.css
+**/*.css.map

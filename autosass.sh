@@ -9,4 +9,3 @@ do
     echo "scss $file $css_dir/$(basename $fname)$ext"
     scss $file $css_dir/$(basename $fname)$ext
 done
-python main.py
