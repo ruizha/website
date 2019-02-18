@@ -11,28 +11,10 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: row;
-    justify-content: center; }
+    padding: 0; }
 
 #content {
-    width: 60%; }
-
-.navbar {
-    display: flex;
-    flex-flow: column;
-    width: 15em;
-    margin: 2em 0 0 1em;
-    height: 100%; }
-
-.navbar-item {
-    width: 100%;
-    height: 3em;
-    display: flex;
-    flex-flow: row;
-    padding-left: 1em;
-    align-items: center; }
+    overflow: hidden; }
 
 .navbar-item-link {
     color: $link-color-dark; }
@@ -53,11 +35,6 @@ a {
 #academia ul {
     list-style: none;
     padding-left: 0; }
-
-.primary-divider {
-    height: 100%;
-    width: 0;
-    margin: 0 20px 0 20px; }
 
 h1 { font-size: 2em; }
 h2 { font-size: 1.7em; }

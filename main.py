@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import random
 import enum
 
@@ -53,7 +53,7 @@ navitems = [
     NavbarItem("home", "Home", "/home"),
     NavbarItem("work", "Where I Worked", "/work"),
     NavbarItem("projects", "Projects", "/projects"),
-    NavbarItem("contact", "More About Me", "/contacts")
+    NavbarItem("contacts", "More About Me", "/contacts")
 ]
 
 langs = SkillList("Programming Languages", [
@@ -157,27 +157,43 @@ def set_active_navitem(tab):
         if nav.id == tab:
             nav.active = True
 
+mobile_agents = [
+    'iphone',
+    'android',
+    'mobile',
+    'mobi',
+    'opera mini',
+    'phone',
+]
+
+def check_if_mobile():
+    user_agent = request.headers.get('User-Agent').lower()
+    for agent in mobile_agents:
+        if agent in user_agent:
+            return True
+    return False
+
 @app.route("/")
 @app.route('/home')
 def main():
     set_active_navitem('home')
     return render_template('home.html', subtitle="Full-Stack Developer", navitems=navitems, links=links,
-                            skills_groups=[langs, frameworks, tools], classes=classes)
+                            skills_groups=[langs, frameworks, tools], classes=classes, mobile=check_if_mobile())
 
 @app.route('/work')
 def work():
     set_active_navitem('work')
-    return render_template('work.html', works=works, navitems=navitems)
+    return render_template('work.html', works=works, navitems=navitems, mobile=check_if_mobile())
 
 @app.route('/projects')
 def projects():
     set_active_navitem('projects')
-    return render_template('projects.html', projects=project_list, navitems=navitems)
+    return render_template('projects.html', projects=project_list, navitems=navitems, mobile=check_if_mobile())
 
 @app.route('/contacts')
 def contacts():
     set_active_navitem('contacts')
-    return render_template('contacts.html', navitems=navitems)
+    return render_template('contacts.html', navitems=navitems, mobile=check_if_mobile())
 
 if __name__ == '__main__':
     if DEBUG:
