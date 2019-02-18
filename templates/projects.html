@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block css %}
+<link rel='stylesheet' type='text/css' href='{{ url_for('static', filename='css/projects.css') }}'>
+{% endblock %}
 {% block content %}
 <h1> Projects </h1>
 {% for project in projects %}
@@ -9,6 +12,7 @@
     {% for tech in projects.techs %}
         <div class='tech' style='background: {{ tech.bg }}; color: white;'> <p> {{ tech.text }} </p> </div>
     {% endfor %}
+    </div>
 </div>
 {% endfor %}
 {% endblock %}

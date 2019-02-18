@@ -1,10 +1,13 @@
 {% extends "base.html" %}
+{% block css %}
+<link rel='stylesheet' type='text/css' href='{{ url_for('static', filename='css/work.css') }}'>
+{% endblock %}
 {% block content %}
 <h1> Where I've Worked </h1>
 {% for work in works %}
     <div class='work-block'>
-        <h4 class='text-block-header work-block-header'> {{ work.title }} @ {{ work.company }} </h4>
-        <h5 class='work-block-subheader work-location'> {{ work.location }} </h5>
+        <h4 class='text-block-header work-block-header'> <span class='work-title'>{{ work.title }}</span> @ {{ work.company }} - <span class='work-location'>{{ work.location }}</span></h4>
+        <h5 class='work-block-subheader work-timerange'> {{ work.time_range }} </h5>
         <p class='text-block-text work-block-text'> {{ work.description }} </p>
     </div>
 {% endfor %}

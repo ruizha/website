@@ -30,9 +30,10 @@ class Academic:
         self.text = text
 
 class Work:
-    def __init__(self, title, company, location, description):
+    def __init__(self, title, company, time_range, location, description):
         self.title = title
         self.company = company
+        self.time_range = time_range
         self.location = location
         self.description = description
 
@@ -43,11 +44,11 @@ class Project:
         self.text = text
 
 class PROFICIENCY:
-    NOKNOWLEDGE = ("clueless", '#aaaaaa')
-    THEORETICAL = ("heard of it", '#f9db89')
-    PRACTICAL = ("kinda know", '#96eaa7')
-    COMFORTABLE = ("comfortable", "#84e0d1")
-    ADEPT = ("adept", "#a5c7ff")
+    NOKNOWLEDGE = ("clueless", "#707070")
+    THEORETICAL = ("heard of it", "#e57369")
+    PRACTICAL = ("kinda know", "#ffd04f")
+    COMFORTABLE = ("comfortable", "#19b569")
+    ADEPT = ("adept", "#5490f2")
 
 navitems = [
     NavbarItem("home", "Home", "/home"),
@@ -102,9 +103,9 @@ links = {
 }
 
 works = [
-    Work("Engineering Intern", "Big Huge Games", "Jan. 2019 - Apr. 2019", "I was always very curious about video games and how it is all made. Therefore, after receiving my bachelors in Computer Science from Rutgers University and before I start my full-time role, I took an internship with BHG, embedded as an engineering intern in Core Tech and Tools. I work with a variety of technologies including Spring Boot, Python 3, .NET, amongst others improve libraries and applications already in use throughout the organization. Working there has opened my eyes about the requirements of systems that are both low latency and highly available."),
-    Work("Summer Technical Analyst", "Royal Bank of Canada (RBC) Capital Markets", "Jun. 2018 - Aug. 2018", "During the summer 2018, I worked as a Technical Summer Analyst at Royal Bank of Canada Capital Markets. Working with a brilliant team of 17 interns and engineers, we developed an API Portal so that engineers have a central place to catalogue the libraries available as well as their documentation. We used Django, Python 3, and SQL Server to build the backend and for data storage. React.js and SASS were used to build the frontend. During the internship, I learned how to work in a large organization and Agile, working to meet the demands of the stakeholders."),
-    Work("Student Developer", "Rutgers University EAS - Open Systems Solutions", "Jan. 2017 - Dec. 2018", "Starting in sophomore year, I worked as a Student Developer for OIT-Open Systems Solutions, a student-led department that developed the official Rutgers Application as well as several other services. I started as an Android developer and later on transitioned to working on the Express.js backend for the mobile application. We used a variety of tools, such as Express.js, Flask, MongoDB, and MariaDB."),
+    Work("Engineering Intern", "Big Huge Games", "Jan. 2019 - Apr. 2019", "Baltimore, MD", "I was always very curious about video games and how it is all made. Therefore, after receiving my bachelors in Computer Science from Rutgers University and before I start my full-time role, I took an internship with BHG, embedded as an engineering intern in Core Tech and Tools. I work with a variety of technologies including Spring Boot, Python 3, .NET, amongst others improve libraries and applications already in use throughout the organization. Working there has opened my eyes about the requirements of systems that are both low latency and highly available."),
+    Work("Summer Technical Analyst", "Royal Bank of Canada (RBC) Capital Markets", "Jun. 2018 - Aug. 2018", "Jersey City, NJ", "During the summer 2018, I worked as a Technical Summer Analyst at Royal Bank of Canada Capital Markets. Working with a brilliant team of 17 interns and engineers, we developed an API Portal so that engineers have a central place to catalogue the libraries available as well as their documentation. We used Django, Python 3, and SQL Server to build the backend and for data storage. React.js and SASS were used to build the frontend. During the internship, I learned how to work in a large organization and Agile, working to meet the demands of the stakeholders."),
+    Work("Student Developer", "Rutgers University EAS - Open Systems Solutions", "Jan. 2017 - Dec. 2018", "New Brunswick, NJ", "Starting in sophomore year, I worked as a Student Developer for OIT-Open Systems Solutions, a student-led department that developed the official Rutgers Application as well as several other services. I started as an Android developer and later on transitioned to working on the Express.js backend for the mobile application. We used a variety of tools, such as Express.js, Flask, MongoDB, and MariaDB."),
 ]
 
 project_list = [
