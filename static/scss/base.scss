@@ -35,7 +35,7 @@ body {
     align-items: center; }
 
 .navbar-item-link {
-    color: #565e70; }
+    color: $link-color-dark; }
 
 .page-active {
     background: $primary-color;
@@ -48,7 +48,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #7597dd; }
+    color: $link-color-normal; }
 
 #academia ul {
     list-style: none;
