@@ -6,6 +6,6 @@ ext=".css"
 for file in $scss_dir/*
 do
     fname="${file%.*}"
-    echo "scss $file $css_dir/$(basename $fname)$ext"
-    scss $file $css_dir/$(basename $fname)$ext
+    echo "sass $file $css_dir/$(basename $fname)$ext"
+    sass $file $css_dir/$(basename $fname)$ext
 done

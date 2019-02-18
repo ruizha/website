@@ -1,0 +1,45 @@
+.skill {
+    display: flex;
+    flex-flow: row;
+    width: 30em;
+    margin-top: 0.5em;
+    align-items: center; }
+
+.skill-title {
+    width: 15em; }
+
+.skill-proficiency {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100em;
+    color: white;
+    margin-right: 7px;
+    padding: 1px 10px 1px 10px; }
+
+.skill-dot {
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 100em;
+    margin-right: 5px;
+    margin-top: 2px; }
+
+.skill-header {
+    margin-bottom: 0; }
+
+.skill-title {
+    margin: 0; }
+
+.text-block-header {
+    margin-bottom: 0; }
+
+.text-block-text {
+    margin: 2em 0 2em 0; }
+
+.class-title {
+    margin: 1.25em 0 0.25em 0; }
+
+.class-text {
+    margin: 0; }

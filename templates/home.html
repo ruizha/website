@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel='stylesheet' type='text/css' href={{ url_for('static', filename='css/home.css') }}>
+{% endblock %}
+{% block content %}
+<h1> Rui Zhang </h1>
+<h2> {{ subtitle }} </h3>
+<div id='about-me' class='text-block'>
+    <h4 id='about-me-header' class='text-block-header'> About Me </h4>
+    <p class='text-block-text'>
+		Hey! My name is Rui (pronounced Ray) and I am a recent graduate of Rutgers University-New Brunswick with a Bachelors in Computer Science. While at Rutgers, I was involved in developing the University's official Android application and the Node.js backend that it depends on. I have also worked in a variety of other places. <a href='{{ links['work'] }}' class='link'>Click here for an overview of where I worked!</a> </p>
+	<p class='text-block-text'>
+		In addition, I also have quite a few projects. <a href='{{ links['projects'] }}' class='link'>Here are a few of them</a> Most of the work I did, and what I am interested in, is in backend development. I love seeing and understanding the intricacies of how each system has to intertwine with each other just right for it all to work. However, every now and then I'll also dabble in the frontend and writing some HTML, CSS, Javascript.
+	</p>
+</div>
+<div id='skills' class='text-block'>
+	<h4 id='skills-header' class='text-block-header'> What Can I Do? </h4>
+    {% for skillgroup in skills_groups %}
+        <h5 class='skill-header'> {{ skillgroup.header }} </h5>
+        <div class='skill-list'>
+        {% for skill in skillgroup.skills_list %}
+            <div class='skill-group'>
+                <div class='skill'>
+                    <p class='skill-title'> {{ skill.title }} </p>
+                    <div class='skill-proficiency' style='background: {{ skill.color }}'>
+                        <div class='skill-dot'></div>
+                        {{ skill.proficiency }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+<div id='academia' class='text-block'>
+	<h4 id='academia-header' class='text-block-header'> Some Classes I Enjoy </h4>
+		<ul>
+		{% for class in classes %}
+			<li class='class-block'>
+				<h5 class='class-title'> {{ class.title }} - {{ class.code }} </h5> <p class='class-text'> {{ class.text }} </p>
+			</li>
+		{% endfor %}
+		</ul>
+</div>
+{% endblock %}

@@ -1,36 +1,21 @@
-.contact-methods {
-    display: flex;
-    flex-flow: column;
-    margin-top: 10px;
-    width: 300px;
-}
+@import "./colors";
 
-.contact-element, .contact-element a {
+.contact {
     display: flex;
     flex-flow: row;
-    width: 100%;
-    align-items: center;
-}
+    width: 20em;
+    margin: 0.75em 0 0.75em 0;
+    align-items: center; }
 
 img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; }
 
-.contacts-link {
+.contact-list {
     display: flex;
-    flex-flow: row;
+    flex-flow: column; }
 
-    p {
-        color: #000000;
-    }
-}
-
-.contact-element:hover {
-    cursor: pointer;
-}
-
-#copied-text {
-    margin-right: -10px;
-}
+.contact-link {
+    margin: 0;
+    color: $link-color-dark; }

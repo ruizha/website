@@ -1,99 +1,67 @@
-$color-selected: #444444;
+@import "./colors";
+
 html {
-    font-family: 'Cabin', helvetica, sans-serif;
     width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    background: white;
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    font-family: "Source Sans Pro", helvetica, sans-serif; }
 
 body {
-    width: 40%;
-    display: flex;
-    flex-flow: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin: 0;
-}
-
-.navbar {
     width: 100%;
-    height: 40px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-flow: row;
-    align-items: center;
-    justify-content: center;
-}
+    justify-content: center; }
 
-.navbar-item-element {
-    margin-left: 10px;
-    margin-right: 10px;
-}
+#content {
+    width: 60%; }
 
-.bold, .section-header, .page-header {
-    font-weight: bold;
-}
-
-.section-header {
-    font-size: 20px;
-}
-
-.page-header {
-    font-size: 30px;
-}
-
-.active-tab {
-    background: $color-selected;
-    text-decoration: none;
-    p {
-        color: #ffffff;
-    }
-}
-
-.navbar-item-element {
-    height: 100%;
-    width:  125px;
-    cursor: pointer;
+.navbar {
     display: flex;
     flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.7s all ease;
+    width: 15em;
+    margin: 2em 0 0 1em;
+    height: 100%; }
+
+.navbar-item {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-flow: row;
+    padding-left: 1em;
+    align-items: center; }
+
+.navbar-item-link {
+    color: $link-color-dark; }
+
+.page-active {
+    background: $primary-color;
+    color: white; }
+
+.navbar-item:hover:not(.page-active) {
+    background: $primary-color-accent;
+    color: white;
+    transition: all 0.25s ease; }
+
+a {
     text-decoration: none;
-    p:not(.active-tab) {
-        color: #000000;
-    }
-}
+    color: $link-color-normal; }
 
-.navbar-item-element:hover {
-    background: $color-selected;
-    p {
-        color: white;
-    }
-}
+#academia ul {
+    list-style: none;
+    padding-left: 0; }
 
-.text-link {
-    color: #8aabe2;
-}
+.primary-divider {
+    height: 100%;
+    width: 0;
+    margin: 0 20px 0 20px; }
 
-.text-link:hover {
-    color: #6798EB;
-}
-
-.link-nt {
-    cursor: pointer;
-}
-
-.deactivate {
-    text-decoration: line-through;
-}
-
-a:link, a:visited {
-    text-decoration: none;
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.7em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 1em; }
