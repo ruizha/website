@@ -1,44 +1,30 @@
 {% extends 'base.html' %}
-{% block stylesheets %}
-<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/contacts.css') }}">
+{% block css %}
+<link rel='stylesheet' type='text/css' href='{{ url_for('static', filename='css/contacts.css') }}'>
 {% endblock %}
-{% block scripts %}
-<script src="{{ url_for('static', filename='js/contacts.js') }}"></script>
+{% block js %}
+
 {% endblock %}
-{% block header %}
-    <div class='page-header'>
-        <p> How You Could Reach Me </p>
+{% block content %}
+<h1> Getting To Know Me </h1>
+<div class='contact-list'>
+    <div class='contact'>
+        <img src='{{ url_for('static', filename='imgs/github.png') }}'>
+        <a class='contact-link link' href='https://github.com/Rui-Zhang1997'>Feel free to check out my github!</a>
     </div>
-{% endblock %}
-{% block body %}
-        <div class='intro'>
-            <p>If, for whatever reason, you want to contact me to talk about my projects or my experiences, you can reach me by:</p>
-        </div>
-        <div class='contact-methods'>
-            <div class='contact-element'>
-                <a class='contacts-link' href='https://github.com/Rui-Zhang1997' target='_blank'>
-                    <img src="{{ url_for('static', filename='images/github.png') }}">
-                    <p> Feel free to take a look at my Github! </p>
-                </a>
-            </div>
-            <div class='contact-element' id='email'>
-                <img src="{{ url_for('static', filename='images/email.png') }}">
-                <p> My primary method of contact is through my email:
-                    <span id='email-text'>r.zhang194@gmail.com<span>
-                </p>
-                <p class='fadeInOut' id='copied-text' value=500 style='visibility: hidden;'> Copied! </p>
-            </div>
-            <div class='contact-element'>
-                <a class='contacts-link' href='https://www.dropbox.com/s/nvtbp6si16ng24b/rui_zhang_resume.pdf?dl=0'>
-                    <img src="{{ url_for('static', filename='images/resume.png') }}">
-                    <p> You can also have a look at my resume, which is updated as frequently as possible </p>
-                </a>
-            </div>
-            <div class='contact-element'>
-                <a class='contacts-link' href='https://www.linkedin.com/in/rui-zhang-ba016510b/' target='_blank'>
-                    <img src="{{ url_for('static', filename='images/linkedin.png') }}">
-                    <p> You can also check out my LinkedIn </p>
-                </a>
-            </div>
-        </div>
+    <div class='contact'>
+        <img src='{{ url_for('static', filename='imgs/resume.png') }}'>
+        <a class='contact-link link' href='https://www.dropbox.com/s/nvtbp6si16ng24b/rui_zhang_resume.pdf?dl=0'>Click here for my resume!</a>
+    </div>
+    <div class='contact'>
+        <img src='{{ url_for('static', filename='imgs/email.png') }}'>
+        <a class='contact-link link' id='email-link'>r.zhang194@gmail.com</a>
+    </div>
+    <div class='contact'>
+        <img src='{{ url_for('static', filename='imgs/linkedin.png') }}'>
+        <a class='contact-link link' href='https://www.linkedin.com/in/rui-zhang-ba016510b/'>
+            Check out my LinkedIn!
+        </a>
+    </div>
+</div>
 {% endblock %}

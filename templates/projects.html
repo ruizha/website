@@ -1,62 +1,14 @@
-{% extends 'base.html' %}
-{% block stylesheets %}
-<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/projects.css') }}">
-{% endblock %}
-{% block scripts %}
-
-{% endblock %}
-{% block header %}
-    <div class='page-header'>
-        <p> Here Are Some Projects I've Worked On </p>
-    </div>
-{% endblock %}
-{% block body %}
-    <div class='projects'>
-        <div class='subsection project-subsection'>
-            <div class='subsection-name bold'>
-                Royal Bank of Canada API Catalogue (Jun. 2018 - Aug. 2018)
-            </div>
-            <div class='project-desc'>
-                RBCCM has a large number of internal APIs developed by its many teams, from traders to programmers, and there should be a central place where people can
-                search and experiment with the APIs. As such, the 2018 Summer Intern Class was tasked with creating an API Catalogue where RBC developers can onboard their APIs
-                and have it be visible to RBCCM as well as other groups such as Investor and Treasury Services. Every team performed in a full-stack capacity, designing and implementing
-                both frontend and backend. The application was built by following MVC principles.
-                We made a RESTful backend using Django REST Framework and SQL Server. We developed a responsive frontend
-                using React.js and SASS. We deployed to a Redhat Linux Machine using JenkinsCI. Application was tested using Python's unittest and Nose libraries.
-            </div>
-        </div>
-        <div class='subsection project-subsection'>
-            <div class='subsection-name bold'> Rutgers Android Application (Jan. 2017 - Now) </div>
-            <div class='project-desc'>
-                During the semester, I work on the official Rutgers Android Application at Rutgers OIT-OSS which is used by 30,000+ simultaneous users. The application is
-                built using MVP principles. RxJava is used extensively throughout the application in conjunction with Retrofit2 for Async I/O and state/event management. FCM/GCM is used
-                to send notifications to users regarding bus arrivals and departures (and whatever other notices that we are required to send). Other libraries that
-                we use include Picasso for image processing and Apache Commons. Application was tested using JUnit.
-            </div>
-        </div>
-        <div class='subsection project-subsection'>
-            <div class='subsection-name bold'> Rutgers Mobile Backend (Mar. 2017 - Now) </div>
-                In addition to the mobile application, I also develop the backend that serves as a data aggregation service, pulling data from various departments
-                and services, like Transloc for monitoring the University's bus system and Schedule of Classes for class availability and scheduling, converting
-                them into a standardized format, before delivering it to Android and iOS clients. It is a RESTful API built using Express.js. MongoDB is used for data storage.
-                It is containerized on Docker and Docker Swarm so the application can be deployed on E-Discovery VMs. Mocha and Chai are used for
-                unit tests.
-            </div>
-        <div class='subsection project-subsection'>
-            <div class='subsection-name bold'> HackRU Ideaboard (Sept. 2017 - Nov. 2017) </div>
-                The primary goal of a hackathon is working on a team to solve a particular problem. But unless one comes with a team in mind, finding that team might be
-                difficult. I helped to build the Ideaboard for HackRU, which is meant to help HackRU attendees form groups. Ideaboard is a Slackbot that allows attendees
-                to list their project ideas and see the ideas of others, so that everyone could see if there is any project that interests them. So instead of having to
-                ask around and potentially miss the chance to help on a project that one likes, one can just use the Ideaboard, see all the projects that are recruiting
-                and what skills the project requires, and sign on with them.
-            </div>
-        <div class='subsection project-subsection'>
-            <div class='subsection-name bold'> InvestWell (Oct. 2018) </div>
-                Project for HackRU Fall 2018 where we developed an application to give financial advice to users based on users with similar financial backgrounds. We used
-                the Yodlee API to gather data about users, extracting only non-identifying information about each user, and cluster using K-Means. We used a Multi-Layer Perceptron
-                to determine the fitness of a person's portfolio based on others in the cluster. Frontend was built using Angular.js, backend in Flask and MongoDB. For
-                machine learning we used scikit-learn. Oh, it won 3rd place overall so yay!
-            </div>
-        </div>
-    </div>
+{% extends "base.html" %}
+{% block content %}
+<h1> Projects </h1>
+{% for project in projects %}
+<div class='text-block'>
+    <h4 class='text-block-header project-block-header'> {{ project.title }} ({{ project.duration }}) </h4>
+    <p class='text-block-text'> {{ project.text }} </p>
+    <div class='tech-list'>
+    {% for tech in projects.techs %}
+        <div class='tech' style='background: {{ tech.bg }}; color: white;'> <p> {{ tech.text }} </p> </div>
+    {% endfor %}
+</div>
+{% endfor %}
 {% endblock %}
